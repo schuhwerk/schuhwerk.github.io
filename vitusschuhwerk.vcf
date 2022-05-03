@@ -1,0 +1,21 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Schuhwerk;Vitus;;;
+FN:Vitus Schuhwerk
+ORG:
+TITLE:Design & (Web-)Development
+TEL;TYPE=CELL:
+TEL;TYPE=WORK:
+TEL;TYPE=HOME:
+TEL;TYPE=MSG:
+TEL;TYPE=SIGNAL:
+EMAIL;TYPE=WORK:vitus.schuhwerk@gmail.com
+URL;TYPE=Digital Business Card:https://vs.digital
+URL:
+URL;TYPE=Telegram:https://t.me/@vitus_vitus_vitus
+URL;TYPE=GitHub:https://github.com/schuhwerk
+URL;TYPE=Spotify:https://open.spotify.com/user/v1tu5
+KEY;TYPE=PGP;ENCODING=b:
+NOTE:Hi! I'm Vitus.I like building (digital) tools for and with people.
+UID:EnBizCard-100581146
+END:VCARD
