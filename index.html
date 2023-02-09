@@ -5,9 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="author" content="EnBizCard - An Open-Source Digital Business Card Generator">
-  <meta name="url" content="https://enbizcard.vishnuraghav.com/">
-  <meta name="designer" content="Vishnu Raghav">
+  <meta name="author" content="Vitus Schuhwerk">
+  <link rel="icon" href="favicon.svg" />
   <meta property="og:title" content="Vitus Schuhwerk's Digital Business Card">
   <meta property="twitter:title" content="Vitus Schuhwerk's Digital Business Card">
   <script>"http" == window.location.href.substr(0, 4) && "/" != window.location.href.slice(-1) && window.location.replace(window.location.href + "/"); </script>
@@ -231,8 +230,9 @@
       </div>
     </div>
   </main>
-  <footer class="textColor" style="opacity: 0.5;"> Created with <a href="https://enbizcard.vishnuraghav.com/"
-      target="_blank" rel="noopener noreferrer" class="textColor">EnBizCard</a> and Vanta.js</footer>
+  <footer class="textColor" style="opacity: 0.5;"> Created with <a href="https://enbizcard.vishnuraghav.com"
+      target="_blank" rel="noopener noreferrer" class="textColor">EnBizCard</a> and <a href="https://www.vantajs.com"
+      target="_blank" rel="noopener noreferrer" class="textColor">Vanta.js</a></footer>
   <script src="./qrcode.min.js"></script>
   <script>let m = document.getElementById("modal"), c = document.getElementById("close"), ki = document.getElementById("keyView"), cv = document.getElementById("copyView"), curl = document.getElementById("copyURL"), qrv = document.getElementById("qrView"), qr = document.getElementById("qr"), s = document.getElementById("share"), sqr = document.getElementById("showQR"), sk = document.getElementById("showKey"); function tC(e) { "2rem" == e.style.top ? (e.style.visibility = "visible", e.style.top = "0px", e.style.opacity = 1) : (e.style.top = "2rem", e.style.opacity = 0, setTimeout(() => { e.style.visibility = "hidden" }, 200)) } function dN(e) { e.style.display = "none" } window.addEventListener("load", () => { document.querySelector("#topActions").style.display = "flex", qr.innerHTML = new QRCode({ content: window.location.href, container: "svg-viewbox", join: !0, ecl: "L", padding: 0 }).svg() }), navigator.canShare ? s.addEventListener("click", () => { navigator.share({ title: document.title, text: "You can view my Digital Business Card here:", url: window.location.href }) }) : s.addEventListener("click", () => { tC(m), cv.style.display = "flex", dN(qrv), ki && dN(ki) }), sqr.addEventListener("click", () => { tC(m), qrv.style.display = "block", dN(cv), ki && dN(ki) }), sk && sk.addEventListener("click", () => { tC(m), ki && (ki.style.display = "flex"), dN(cv), dN(qrv) }), c.addEventListener("click", () => tC(m)), curl.addEventListener("click", async () => { let e = curl.querySelectorAll(".iconColor")[1]; await navigator.clipboard.writeText(window.location.href).then(t => { e.innerText = "Copied", setTimeout(() => { e.innerText = "Copy URL" }, 1e3) }) });</script>
   <script>let pC = document.querySelectorAll(".pCtrl"), pP = document.querySelectorAll(".playPause"), srcs = document.querySelectorAll(".source"); srcs.forEach(e => { e.style.pointerEvents = "none", e.removeAttribute("controls") }), pC.forEach((e, l) => { e.style.display = "flex"; let r = e.querySelector(".currentTime"), s = e.querySelector(".seekBar"), t = e.querySelector(".playPause"), a = t.querySelector(".play"), c = t.querySelector(".pause"); srcs[l].addEventListener("timeupdate", () => { let e = srcs[l].currentTime, t = 100 / srcs[l].duration * e; s.value = t, 100 == t && (s.value = 0, a.style.display = "block", c.style.display = "none"); let o = Math.floor(e / 60), y = Math.floor(e % 60); o.toString().length < 2 && (o = "0" + o), y.toString().length < 2 && (y = "0" + y), r.value = o + ":" + y }), s.addEventListener("change", () => { srcs[l].currentTime = srcs[l].duration * (parseInt(s.value) / 100) }), t.addEventListener("click", () => { srcs[l].paused ? (srcs.forEach((e, r) => { l != r && (e.paused || e.pause()) }), pP.forEach((e, l) => { let r = e.querySelector(".play"), s = e.querySelector(".pause"); r.style.display = "block", s.style.display = "none" }), srcs[l].play(), a.style.display = "none", c.style.display = "block") : (srcs[l].pause(), c.style.display = "none", a.style.display = "block") }) });</script>
