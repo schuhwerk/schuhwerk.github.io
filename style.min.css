@@ -5,6 +5,7 @@ html {
 
 .vanta-canvas {
 	mix-blend-mode: screen;
+	transition: 4s opacity;
 }
 
 body {
@@ -173,8 +174,8 @@ main {
 	text-align: center;
 	border-radius: 0.5rem;
 	margin-top: 4rem;
-    background-image: radial-gradient(#ffffff00 1px, #2a2a2c 1px);
-    background-size: 1rem 1rem;
+	background-image: radial-gradient(#ffffff00 1px, rgba(42, 42, 44, 1) 1px);
+	background-size: 0.3rem 0.3rem;
 }
 
 #profilePhoto {
