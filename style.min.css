@@ -1,7 +1,7 @@
 :root {
   --bg-color: #050505;
-  --card-bg: linear-gradient(160deg, rgba(20, 22, 21, 0.65) 0%, rgba(10, 12, 11, 0.75) 100%);
-  --text-color: #f0f2f1;
+  --card-bg: linear-gradient(160deg, rgba(20, 22, 21, 0.3) 0%, rgba(10, 12, 11, 0.4) 100%);
+  --text-color: #cddfd6;
   --text-muted: #8a9a94;
   --hacker-border: rgba(100, 255, 180, 0.05);
   --glass-blur: 10px;
@@ -15,6 +15,7 @@ html {
   background-color: var(--bg-color);
   font-size: 18px;
   background: var(--bg-color);
+  background: radial-gradient(circle at top left, #2E5E4E, #050505 70%);
 }
 
 body {
@@ -39,13 +40,14 @@ body {
   height: 100%;
   z-index: -1;
   pointer-events: none;
-  transition: opacity 2.5s ease;
+  transition: opacity 4s ease;
+  mix-blend-mode: exclusion;
 }
 
 main {
-  width: 100%;
-  max-width: 520px;
-  margin: 2rem 1rem;
+  width: 75%;
+  max-width: 450px;
+  margin: 8rem 1rem;
   padding: 4rem 1rem 5rem;
   border-radius: var(--border-radius);
 
@@ -85,11 +87,11 @@ h3, p {
 }
 
 .name {
-  font-size: 2.4rem;
+  font-size: clamp(1.8rem, 4.3vw, 2.1rem);
   font-weight: 600;
   margin-bottom: 0.5rem;
   letter-spacing: 0.5px;
-  color: #fff;
+  color: var(--text-color);
   width: 100%;
   text-align: center;
   text-shadow: 0 0 15px rgba(0, 255, 136, 0.15);
@@ -137,7 +139,7 @@ a {
 .actions {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
   width: 100%;
